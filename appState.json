@@ -1,0 +1,104 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "9b21db4a-eb51-4d7c-8e18-17a9d0774993": {
+        "id": "9b21db4a-eb51-4d7c-8e18-17a9d0774993",
+        "parent": null,
+        "name": "kkinesistriggerdemo.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "kkinesistriggerdemo.js",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "kkinesistriggerdemo"
+        },
+        "triggers": [
+          {
+            "resourceName": "kinesiskdemotrigger",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
+          }
+        ],
+        "lastUpdated": 1604385975279,
+        "testCases": {
+          "ae279cc9-7e06-453f-b286-c5fd49a4ed59": {
+            "id": "ae279cc9-7e06-453f-b286-c5fd49a4ed59",
+            "name": "Test event",
+            "functionId": "9b21db4a-eb51-4d7c-8e18-17a9d0774993",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "9b21db4a-eb51-4d7c-8e18-17a9d0774993"
+    ],
+    "currentFileId": "9b21db4a-eb51-4d7c-8e18-17a9d0774993",
+    "resources": {
+      "kinesiskdemotrigger": {
+        "name": "kinesiskdemotrigger",
+        "type": "Kinesis",
+        "config": {
+          "mode": 0,
+          "StreamName": "kdemotrigger",
+          "shards": 1,
+          "region": "us-east-1",
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.5",
+    "projectName": "kkinesistriggerdemo",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1604386021468
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "kkinesistriggerdemo",
+      "url": "https://github.com/Kumudikatest/kkinesistriggerdemo"
+    }
+  }
+}
